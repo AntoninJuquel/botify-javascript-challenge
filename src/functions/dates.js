@@ -1,7 +1,7 @@
-export function closestDate(dates) {
-    const beforedates = dates.filter(date => date - new Date() < 0)
+export function closestDate(datesArray) {
+    const beforedates = datesArray.filter(date => date - new Date() < 0)
     const closestDate = beforedates.pop()
-    return { date: closestDate, index: dates.indexOf(closestDate) }
+    return { date: closestDate, index: datesArray.indexOf(closestDate) }
 }
 
 export function formatDate(date) {
