@@ -3,7 +3,9 @@ import Chart from 'react-google-charts'
 
 export default function ChartComponent({ data }) {
     return (
+        data.length > 0 ?
         <Chart
+            
             width="100%"
             height="100%"
             chartType="BarChart"
@@ -18,6 +20,6 @@ export default function ChartComponent({ data }) {
                     title: 'Neo Name',
                 },
             }}
-        />
+        /> : null
     )
 }
