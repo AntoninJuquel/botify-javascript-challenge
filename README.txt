@@ -1,1 +1,0 @@
-This is a React challenge using react-google-chart and nasa open API
