@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/botify-javascript-challenge/static/css/main.81bf5c7e.chunk.css",
-    "main.js": "/botify-javascript-challenge/static/js/main.724f3e7c.chunk.js",
-    "main.js.map": "/botify-javascript-challenge/static/js/main.724f3e7c.chunk.js.map",
+    "main.js": "/botify-javascript-challenge/static/js/main.4f31fff6.chunk.js",
+    "main.js.map": "/botify-javascript-challenge/static/js/main.4f31fff6.chunk.js.map",
     "runtime-main.js": "/botify-javascript-challenge/static/js/runtime-main.16200d93.js",
     "runtime-main.js.map": "/botify-javascript-challenge/static/js/runtime-main.16200d93.js.map",
     "static/css/2.658248ec.chunk.css": "/botify-javascript-challenge/static/css/2.658248ec.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.658248ec.chunk.css",
     "static/js/2.fe6c9bb3.chunk.js",
     "static/css/main.81bf5c7e.chunk.css",
-    "static/js/main.724f3e7c.chunk.js"
+    "static/js/main.4f31fff6.chunk.js"
   ]
 }
