@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Container } from 'react-bootstrap'
+import { Button, Container, Spinner } from 'react-bootstrap'
 import Chart from 'react-google-charts'
 
 export default function ChartComponent({ format, data, chartTypesArray }) {
@@ -24,7 +24,8 @@ export default function ChartComponent({ format, data, chartTypesArray }) {
                             title: 'Neo Name',
                         },
                     }}
-                /> : null}
+                /> :
+                <Spinner style={{ position: 'absolute', top: '50%' }} variant="primary" animation="border" />}
             <Container style={{ position: 'absolute', top: 0, left: 0 }}>
                 {chartTypesArray.map((chartType, i) => <Button key={i} onClick={() => setChartTypeIndex(i)}>{chartType}</Button>)}
             </Container>
