@@ -9,17 +9,16 @@ export default function ChartComponent({ format, data, chartTypesArray }) {
 
     const onSelectChartType = (key) => {
         const chartTypesKey = Object.keys(chartTypesDict)
-        chartTypesKey.forEach(chartType => chartTypesDict[chartType] = chartType === key)
         setChartTypeIndex(chartTypesKey.indexOf(key))
     }
 
     useEffect(() => {
         const chartTypesDict = {}
         chartTypesArray.forEach((chartType, i) => {
-            chartTypesDict[chartType] = i === 0
+            chartTypesDict[chartType] = i === chartTypeIndex
         })
         setChartTypesDict(chartTypesDict)
-    }, [chartTypesArray])
+    }, [chartTypesArray,chartTypeIndex])
 
 
     return (
