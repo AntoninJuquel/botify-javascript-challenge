@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/botify-javascript-challenge/static/css/main.81bf5c7e.chunk.css",
+    "main.js": "/botify-javascript-challenge/static/js/main.a2bc4552.chunk.js",
+    "main.js.map": "/botify-javascript-challenge/static/js/main.a2bc4552.chunk.js.map",
+    "runtime-main.js": "/botify-javascript-challenge/static/js/runtime-main.67a1bbd6.js",
+    "runtime-main.js.map": "/botify-javascript-challenge/static/js/runtime-main.67a1bbd6.js.map",
+    "static/css/2.658248ec.chunk.css": "/botify-javascript-challenge/static/css/2.658248ec.chunk.css",
+    "static/js/2.c10949f7.chunk.js": "/botify-javascript-challenge/static/js/2.c10949f7.chunk.js",
+    "static/js/2.c10949f7.chunk.js.map": "/botify-javascript-challenge/static/js/2.c10949f7.chunk.js.map",
+    "static/js/3.d4ac08e6.chunk.js": "/botify-javascript-challenge/static/js/3.d4ac08e6.chunk.js",
+    "static/js/3.d4ac08e6.chunk.js.map": "/botify-javascript-challenge/static/js/3.d4ac08e6.chunk.js.map",
+    "index.html": "/botify-javascript-challenge/index.html",
+    "static/css/2.658248ec.chunk.css.map": "/botify-javascript-challenge/static/css/2.658248ec.chunk.css.map",
+    "static/css/main.81bf5c7e.chunk.css.map": "/botify-javascript-challenge/static/css/main.81bf5c7e.chunk.css.map",
+    "static/js/2.c10949f7.chunk.js.LICENSE.txt": "/botify-javascript-challenge/static/js/2.c10949f7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.67a1bbd6.js",
+    "static/css/2.658248ec.chunk.css",
+    "static/js/2.c10949f7.chunk.js",
+    "static/css/main.81bf5c7e.chunk.css",
+    "static/js/main.a2bc4552.chunk.js"
+  ]
+}
