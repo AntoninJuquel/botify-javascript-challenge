@@ -63,7 +63,7 @@ export default function ChartsScreen() {
             <Container style={{ position: 'absolute', right: 0, zIndex: 100 }}>
                 <DropdownComponent title="Orbiting body" itemsDict={filters} placeholder="Type to search..." onSelectItem={selectFilter} />
             </Container>
-            <ChartComponent data={data.neo} chartTypesArray={["BarChart","Table"]} />
+            <ChartComponent format={data.format} data={data.neo} chartTypesArray={["BarChart", "Table"]} />
             <Container style={{ position: 'absolute', bottom: 0 }}>
                 <Button disabled={!data.links.prev} onClick={() => fetchNeo(data.links.prev)}>{"<"}</Button>
                 <Button disabled={!data.links.next} onClick={() => fetchNeo(data.links.next)}>{">"}</Button>

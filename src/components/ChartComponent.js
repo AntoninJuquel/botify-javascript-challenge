@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Button, Container } from 'react-bootstrap'
 import Chart from 'react-google-charts'
 
-export default function ChartComponent({ data, chartTypesArray }) {
+export default function ChartComponent({ format, data, chartTypesArray }) {
     const [chartTypeIndex, setChartTypeIndex] = useState(0)
     return (
         <>
@@ -11,7 +11,7 @@ export default function ChartComponent({ data, chartTypesArray }) {
                     width="100%"
                     height="100%"
                     chartType={chartTypesArray[chartTypeIndex]}
-                    data={[["Neo Name", "Min estimated diameters", "Max estimated diameters"], ...data]}
+                    data={[format, ...data]}
                     options={{
                         title: 'Near Earth Objects',
                         chartArea: { height: '70%', width: '80%', right: 0 },
