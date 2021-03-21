@@ -7,7 +7,13 @@ import { ChartComponent, DropdownComponent } from "../components";
 import { average, closestDate, descending } from "../functions";
 
 export default function ChartsScreen() {
-    const [data, setData] = useState({ links: { next: null, prev: null, curr: null }, neo: [], format: ["Neo Name", "Min estimated diameters", "Max estimated diameters"] })
+    const [data, setData] = useState(
+        {
+            links: { next: null, prev: null, curr: null },
+            format: ["Neo Name", "Min estimated diameters", "Max estimated diameters"],
+            neo: []
+        }
+    )
 
     const [filters, setFilter] = useState({
         "Earth": false,

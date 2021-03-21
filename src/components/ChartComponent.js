@@ -1,9 +1,27 @@
-import React, { useState } from 'react'
-import { Button, Container, Spinner } from 'react-bootstrap'
+import React, { useEffect, useState } from 'react'
+import { Container, Spinner } from 'react-bootstrap'
 import Chart from 'react-google-charts'
+import DropdownComponent from './DropdownComponent'
 
 export default function ChartComponent({ format, data, chartTypesArray }) {
     const [chartTypeIndex, setChartTypeIndex] = useState(0)
+    const [chartTypesDict, setChartTypesDict] = useState({})
+
+    const onSelectChartType = (key) => {
+        const chartTypesKey = Object.keys(chartTypesDict)
+        chartTypesKey.forEach(chartType => chartTypesDict[chartType] = chartType === key)
+        setChartTypeIndex(chartTypesKey.indexOf(key))
+    }
+
+    useEffect(() => {
+        const chartTypesDict = {}
+        chartTypesArray.forEach((chartType, i) => {
+            chartTypesDict[chartType] = i === 0
+        })
+        setChartTypesDict(chartTypesDict)
+    }, [chartTypesArray])
+
+
     return (
         <>
             {data.length > 0 ?
@@ -27,7 +45,7 @@ export default function ChartComponent({ format, data, chartTypesArray }) {
                 /> :
                 <Spinner style={{ position: 'absolute', top: '50%' }} variant="primary" animation="border" />}
             <Container style={{ position: 'absolute', top: 0, left: 0 }}>
-                {chartTypesArray.map((chartType, i) => <Button key={i} onClick={() => setChartTypeIndex(i)}>{chartType}</Button>)}
+                <DropdownComponent title="Chart type" itemsDict={chartTypesDict} onSelectItem={onSelectChartType} placeholder="Type to search..." />
             </Container>
         </>
     )
