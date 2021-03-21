@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Container } from 'react-bootstrap'
+import { CSVLink } from 'react-csv';
 
 import { BrowseNeo } from "../api";
 import { ChartComponent, DropdownComponent } from "../components";
 import { average, closestDate, descending } from "../functions";
 
 export default function ChartsScreen() {
-    const [data, setData] = useState({ links: { next: null, prev: null, curr: null }, neo: [] })
+    const [data, setData] = useState({ links: { next: null, prev: null, curr: null }, neo: [], format: ["Neo Name", "Min estimated diameters", "Max estimated diameters"] })
 
     const [filters, setFilter] = useState({
         "Earth": false,
@@ -50,7 +51,7 @@ export default function ChartsScreen() {
 
         neoResult.sort((a, b) => descending(average(a[1], a[2]), average(b[1], b[2])))
 
-        setData({ links, neo: neoResult })
+        setData({ ...data, links, neo: neoResult })
     }
 
     useEffect(() => {
@@ -67,6 +68,9 @@ export default function ChartsScreen() {
                 <Button disabled={!data.links.prev} onClick={() => fetchNeo(data.links.prev)}>{"<"}</Button>
                 <Button disabled={!data.links.next} onClick={() => fetchNeo(data.links.next)}>{">"}</Button>
             </Container>
+            <div style={{ position: 'absolute', bottom: 0, right: 0 }}>
+                <CSVLink className="btn btn-primary" data={[data.format, ...data.neo]}>Download me</CSVLink>
+            </div>
         </Container>
     )
 }
